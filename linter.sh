@@ -1,3 +1,5 @@
+#!/bin/bash
+
 for f in $(find . -name "*.py")
 do
     scores=$(pylint $f | grep 'Your code has been rated at' | grep -oP '\-?[0-9.]+/10')
